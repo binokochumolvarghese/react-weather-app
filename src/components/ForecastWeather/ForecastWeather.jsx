@@ -24,7 +24,7 @@ const ForecastWeather = () => {
           <div className="rounded-lg  grid md:grid-cols-8 gap-4 text-white text-left px-4 pb-4">
             {forecastData.map((forecast, index) => (
               <div className="bg-slate-500 rounded-lg gap-4 text-white text-left p-2" key={index}>
-                <p className="text-white"> { convertDate(forecast.dt_txt) }  </p>
+                <p className="text-slate-400"> { convertDate(forecast.dt_txt) }  </p>
 
                 <div className="">
                   <img
@@ -38,11 +38,11 @@ const ForecastWeather = () => {
                     {currentWeatherData.weather[0].description}
                   </p>
 
-                <div className="flex flex-row text-slate-900">
+                <div className="flex flex-row text-white">
                 <p className="mr-2 ">
                     {Math.round(forecast.main.temp_max)}&deg;C{" "}
                   </p>
-                  <p className="text-slate-900">
+                  <p className="text-white">
                     {Math.round(forecast.main.temp_min)}&deg;C{" "}
                   </p>
                 </div>
